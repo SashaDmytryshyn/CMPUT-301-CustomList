@@ -13,13 +13,13 @@ class Tests {
 
     private CustomList list;
 
-    @BeforeAll
     public void createList(){
         list = new CustomList(null,new ArrayList<City>());
     }
 
     @Test
     public void addCityTest(){
+        createList();
         int listSize = list.getCount();
         list.addCity(new City("Halifax","NS"));
         assertEquals(list.getCount(),listSize+1);
