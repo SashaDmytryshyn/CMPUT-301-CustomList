@@ -42,7 +42,8 @@ class Tests {
 
     @Test
     void testHasCity(){
-        CustomList cityList = mockCustomList();
-        assertTrue(cityList.hasCity(mockCity()));
+        createList();
+        list.addCity(new City("Halifax","NS"));
+        assertTrue(list.hasCity(new City("Halifax","NS")));
     }
 }
