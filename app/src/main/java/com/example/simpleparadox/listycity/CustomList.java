@@ -34,7 +34,18 @@ public class CustomList extends ArrayAdapter<City> {
         return;
     }
 
+    // NOTE: I AM USING MY OWN CODE FROM LAB 6 FOR THE NEXT 3 FUNCTIONS.
 
+
+    /**
+     * This returns true or false depending on whether
+     *      cities contains the city given as a parameter
+     * @param city string
+     * @return boolean
+     */
+    public boolean hasCity(City city){
+        return false;
+    }
 
 
     @NonNull
