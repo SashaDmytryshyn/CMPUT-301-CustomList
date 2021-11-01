@@ -55,6 +55,14 @@ public class CustomList extends ArrayAdapter<City> {
         return false;
     }
 
+    /**
+     * This deletes a city from cities if cities contains it, else it throws an exception
+     * @param city City object
+     */
+    public void delete(City city){
+        return;
+
+    }
 
     @NonNull
     @Override

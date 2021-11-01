@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class Tests {
@@ -45,5 +46,17 @@ class Tests {
         createList();
         list.addCity(new City("Halifax","NS"));
         assertTrue(list.hasCity(new City("Halifax","NS")));
+    }
+
+    @Test
+    void testDelete(){
+        createList();
+        list.addCity(new City("Halifax","NS"));
+        assertTrue(list.hasCity(new City("Halifax","NS")));
+        list.delete(new City("Halifax","NS"));
+        assertEquals(0,list.getCount());
+        assertThrows(IllegalArgumentException.class,() -> {
+            list.delete(mockCity());
+        });
     }
 }
