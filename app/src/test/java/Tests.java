@@ -59,4 +59,13 @@ class Tests {
             list.delete(mockCity());
         });
     }
+
+    @Test
+    void testCountCities(){
+        createList();
+        list.addCity(new City("Halifax","NS"));
+        assertEquals(1,list.countCities());
+        list.delete(new City("Halifax","NS"));
+        assertEquals(0,list.countCities());
+    }
 }
