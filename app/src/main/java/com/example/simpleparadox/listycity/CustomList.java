@@ -13,6 +13,8 @@ import androidx.annotation.Nullable;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class CustomList extends ArrayAdapter<City> {
 
@@ -25,6 +27,7 @@ public class CustomList extends ArrayAdapter<City> {
         this.context = context;
     }
 
+
     public int getCount(){
         return cities.size();
     }
@@ -34,7 +37,37 @@ public class CustomList extends ArrayAdapter<City> {
         return;
     }
 
+    // NOTE: I AM USING MY OWN CODE FROM LAB 6 FOR THE NEXT 3 FUNCTIONS.
 
+
+    /**
+     * This returns true or false depending on whether
+     *      cities contains the city given as a parameter
+     * @param city string
+     * @return boolean
+     */
+    public boolean hasCity(City city){
+        return false;
+    }
+
+    /**
+     * This deletes a city from cities if cities contains it, else it throws an exception
+     * @param city City object
+     */
+    public void delete(City city){
+
+        return;
+
+    }
+
+
+    /**
+     * This returns the number of cities in cities
+     * @return size of cities
+     */
+    public  int countCities(){
+        return -1;
+    }
 
 
     @NonNull
