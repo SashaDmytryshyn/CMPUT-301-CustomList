@@ -60,7 +60,16 @@ public class CustomList extends ArrayAdapter<City> {
      * @param city City object
      */
     public void delete(City city){
-        return;
+        for (City city2: cities)
+        {
+            if(city.getCityName().equals(city2.getCityName())){
+                if(city.getProvinceName().equals(city2.getProvinceName())){
+                    cities.remove(city2);
+                    return;
+                }
+            }
+        }
+        throw new IllegalArgumentException();
 
     }
 
